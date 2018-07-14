@@ -17,6 +17,7 @@
     "crawler": "^1.1.4",
     "fast-csv": "^2.4.1",
     "fetch": "^1.1.0",
+    "image-downloader": "^3.4.1",
     "lodash": "^4.17.10",
     "mkdirp": "^0.5.1",
     "node-fetch": "^2.1.2",
