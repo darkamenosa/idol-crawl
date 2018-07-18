@@ -47,7 +47,7 @@ async function main() {
   })
 
 
-  let processing = 0
+  let downloadImageCount = 0
 
   urlObservable
   .concatMap(x => Rx.Observable.of(x).delay(50))
@@ -64,7 +64,8 @@ async function main() {
     download
       .image(options)
       .then(({ filename }) => {
-        print('File saved to: ', filename)
+        downloadImageCount += 1
+        print(`Process: ${downloadImageCount}/${count}. File saved to ${filename}`)
       })
       .catch((error) => {
         print(error)
